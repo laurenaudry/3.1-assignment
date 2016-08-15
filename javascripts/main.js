@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
       location.textContent = responseJSON.location;
       email.textContent = responseJSON.email;
       avatar.src = responseJSON.avatar_url;
-      html.url = responseJSON.html_url
+      html.textContent = responseJSON.html_url;
 
     });
   requestRepos.addEventListener('load', function(e){
@@ -36,4 +36,5 @@ document.addEventListener("DOMContentLoaded", function() {
   request.open("GET", "https://api.github.com/users/laurenaudry")
   requestRepos.open("GET", "https://api.github.com/users/laurenaudry/repos")
   request.send(null);
+  requestRepos.send(null);
 });
